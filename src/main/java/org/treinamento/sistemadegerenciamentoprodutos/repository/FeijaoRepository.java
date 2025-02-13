@@ -1,4 +1,7 @@
 package org.treinamento.sistemadegerenciamentoprodutos.repository;
 
-public interface FeijaoRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.treinamento.sistemadegerenciamentoprodutos.model.Feijao;
+
+public interface FeijaoRepository extends CrudRepository<Feijao,Integer> {
 }

@@ -1,4 +1,7 @@
 package org.treinamento.sistemadegerenciamentoprodutos.repository;
 
-public interface AcucarRepository {
+import org.springframework.data.repository.CrudRepository;
+import org.treinamento.sistemadegerenciamentoprodutos.model.Acucar;
+
+public interface AcucarRepository extends CrudRepository<Acucar,Integer> {
 }

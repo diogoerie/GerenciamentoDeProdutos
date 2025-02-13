@@ -32,7 +32,7 @@ public class Acucar extends Produtos{
         if (peso <= 0) {
             throw new PesoInvalidoExcecao("O peso do produto deve ser superior a 0 grama.");
         } else if (!TIPOS_VALIDOS.contains(tipo)) {
-            throw new TipoInvalidoExcecao("O tipo de acucar só pode ser \"integral\",\"mascavo\" ou \"cristal\". ");
+            throw new TipoInvalidoExcecao("O tipo de acucar só pode ser \"integral\", \"mascavo\" ou \"cristal\". ");
         } else if (dataVencimento.isBefore(hoje)) {
             throw new ValidadeInvalidaExcecao("Data de válidade já expirada.");
         }

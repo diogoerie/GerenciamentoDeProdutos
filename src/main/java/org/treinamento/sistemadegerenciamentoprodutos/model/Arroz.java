@@ -32,7 +32,7 @@ public class Arroz extends Produtos {
         if (peso <= 0) {
             throw new PesoInvalidoExcecao("O peso do produto deve ser superior a 0 grama.");
         } else if (!TIPOS_VALIDOS.contains(tipo)) {
-            throw new TipoInvalidoExcecao("O tipo de feijão só pode ser \"carioca\",\"preto\" ou \"branco\". ");
+            throw new TipoInvalidoExcecao("O tipo de feijão só pode ser \"integral\", \"parbolizado\", \"branco\" ou \"agulhinha\". ");
         } else if (dataVencimento.isBefore(hoje)) {
             throw new ValidadeInvalidaExcecao("Data de válidade já expirada.");
         }
