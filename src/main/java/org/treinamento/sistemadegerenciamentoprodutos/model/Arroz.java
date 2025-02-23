@@ -1,5 +1,6 @@
 package org.treinamento.sistemadegerenciamentoprodutos.model;
 
+import jakarta.persistence.Entity;
 import org.treinamento.sistemadegerenciamentoprodutos.excecoes.PesoInvalidoExcecao;
 import org.treinamento.sistemadegerenciamentoprodutos.excecoes.TipoInvalidoExcecao;
 import org.treinamento.sistemadegerenciamentoprodutos.excecoes.ValidadeInvalidaExcecao;
@@ -9,6 +10,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 
+@Entity
 public class Arroz extends Produtos {
     private int peso;
     private LocalDate dataVencimento;

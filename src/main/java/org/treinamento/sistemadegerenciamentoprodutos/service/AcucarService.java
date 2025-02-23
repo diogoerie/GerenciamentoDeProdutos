@@ -20,9 +20,6 @@ public class AcucarService {
     public Optional<Acucar> buscarPorId(Integer id){
         return acucarRepository.findById(id);
     }
-    public List<Acucar> buscarPorNome(String Nome){
-        return acucarRepository.findByNome(Nome);
-    }
     public List<Acucar> listarTodos() {
         return (List<Acucar>) acucarRepository.findAll();
     }
