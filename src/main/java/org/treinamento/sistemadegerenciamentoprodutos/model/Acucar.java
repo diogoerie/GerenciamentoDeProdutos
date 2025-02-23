@@ -17,17 +17,13 @@ public class Acucar extends Produtos{
     private LocalDate dataVencimento;
     private String tipo;
     private static final List<String> TIPOS_VALIDOS = Arrays.asList("integral", "mascavo", "cristal");
-
-
-    public Acucar() {
-    }
+    public Acucar() {}
 
     public Acucar(int peso, String tipo, String dataVencimento) {
         this.peso = peso;
         this.tipo = tipo.toLowerCase();
         this.dataVencimento = LocalDate.parse(dataVencimento, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
-
     @Override
     public double calcularPreco() throws PesoInvalidoExcecao, TipoInvalidoExcecao, ValidadeInvalidaExcecao {
         LocalDate hoje = LocalDate.now();
@@ -42,4 +38,27 @@ public class Acucar extends Produtos{
         return preco;
     }
 
+    public int getPeso() {
+        return peso;
+    }
+
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+
+    public LocalDate getDataVencimento() {
+        return dataVencimento;
+    }
+
+    public void setDataVencimento(LocalDate dataVencimento) {
+        this.dataVencimento = dataVencimento;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 }
